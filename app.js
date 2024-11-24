@@ -33,9 +33,8 @@ async function main(){
 }
 
 
-app.get("/",(req,res)=>{
-    res.send("hi i am root");
-})
+app.use("/",listings);
+
 
 /*app.get("/testlistings",async (req,res)=>{
     let samplelisting=new Listing({
