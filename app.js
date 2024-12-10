@@ -23,7 +23,7 @@ app.use(methodOverride("_method"));
 
 
 
-const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
+//const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
 main()
 .then(()=>{
     console.log("connected");
@@ -32,7 +32,7 @@ main()
 });
 
 async function main(){
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URL);
 }
 
 
